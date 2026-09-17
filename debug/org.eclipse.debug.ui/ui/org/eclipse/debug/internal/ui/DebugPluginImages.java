@@ -198,6 +198,7 @@ public class DebugPluginImages {
 		declareRegistryImage(IDebugUIConstants.IMG_OVR_SKIP_BREAKPOINT, OVR + "skip_breakpoint_ov.svg"); //$NON-NLS-1$
 		declareRegistryImage(IInternalDebugUIConstants.IMG_OVR_SHOW_LOGICAL_STRUCTURE, OVR + "var_cntnt_prvdr_ov.svg"); //$NON-NLS-1$
 		declareRegistryImage(IDebugUIConstants.IMG_OVR_PROTOTYPE, OVR + "prototype.svg"); //$NON-NLS-1$
+		declareRegistryImage(IInternalDebugUIConstants.IMG_OVR_RUNNING, OVR + "run_co.svg"); //$NON-NLS-1$
 
 		//source location
 		declareRegistryImage(IInternalDebugUIConstants.IMG_SRC_LOOKUP_MENU, ELCL + "edtsrclkup_co.svg"); //$NON-NLS-1$

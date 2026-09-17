@@ -147,6 +147,11 @@ public interface IInternalDebugUIConstants {
 	String IMG_OVR_SHOW_LOGICAL_STRUCTURE = "IMG_OVR_SHOW_LOGICAL_STRUCTURE"; //$NON-NLS-1$
 
 	/**
+	 * Running overlay image identifier.
+	 */
+	String IMG_OVR_RUNNING = "IMG_OVR_RUNNING"; //$NON-NLS-1$
+
+	/**
 	 * Editor Id for the "Source Not Found" editor
 	 */
 	String ID_SOURCE_NOT_FOUND_EDITOR = "org.eclipse.debug.ui.NoSourceFoundEditor"; //$NON-NLS-1$

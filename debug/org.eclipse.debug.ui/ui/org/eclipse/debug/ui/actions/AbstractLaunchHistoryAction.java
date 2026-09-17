@@ -31,7 +31,9 @@ import org.eclipse.debug.core.ILaunchConfigurationType;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.debug.core.ILaunchManager;
 import org.eclipse.debug.internal.core.IInternalDebugCoreConstants;
+import org.eclipse.debug.internal.ui.DebugPluginImages;
 import org.eclipse.debug.internal.ui.DebugUIPlugin;
+import org.eclipse.debug.internal.ui.IInternalDebugUIConstants;
 import org.eclipse.debug.internal.ui.ILaunchHistoryChangedListener;
 import org.eclipse.debug.internal.ui.ILaunchLabelChangedListener;
 import org.eclipse.debug.internal.ui.actions.ActionMessages;
@@ -49,6 +51,8 @@ import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.ActionContributionItem;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.dialogs.IDialogConstants;
+import org.eclipse.jface.viewers.DecorationOverlayIcon;
+import org.eclipse.jface.viewers.IDecoration;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
@@ -355,7 +359,9 @@ public abstract class AbstractLaunchHistoryAction implements IActionDelegate2, I
 		for (ILaunchConfiguration launch : favoriteList) {
 			LaunchAction action= new LaunchAction(launch, getMode());
 			if (checkIfLaunchActive(launch, launches)) {
-				action.setText(action.getText() + "  \u2699"); //$NON-NLS-1$
+				action.setImageDescriptor(new DecorationOverlayIcon(action.getImageDescriptor(),
+						DebugPluginImages.getImageDescriptor(IInternalDebugUIConstants.IMG_OVR_RUNNING),
+						IDecoration.BOTTOM_RIGHT));
 			} else {
 				addRecentLaunchTimeTooltip(launch, action);
 			}
@@ -372,7 +378,9 @@ public abstract class AbstractLaunchHistoryAction implements IActionDelegate2, I
 		for (ILaunchConfiguration launch : historyList) {
 			LaunchAction action= new LaunchAction(launch, getMode());
 			if (checkIfLaunchActive(launch, launches)) {
-				action.setText(action.getText() + "  \u2699"); //$NON-NLS-1$
+				action.setImageDescriptor(new DecorationOverlayIcon(action.getImageDescriptor(),
+						DebugPluginImages.getImageDescriptor(IInternalDebugUIConstants.IMG_OVR_RUNNING),
+						IDecoration.BOTTOM_RIGHT));
 			} else {
 				addRecentLaunchTimeTooltip(launch, action);
 			}
